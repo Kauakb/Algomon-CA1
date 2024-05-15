@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algomon CA1</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+                     <!-- div class made for providing nav bar on the home page -->
+          <div class="container">
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html"> Home</a>
+                </li>
+                <li>
+                    <a href="Aboutus.html"> About us</a>
+                </li>
+                <li>
+                    <a href="login.html">Login</a>
+                </li>
+            </ul>
+        </nav>
+
+        <header>
+            <div class="center">
+                <img src="./img/algomon.jpg"></img>
+                <h1> Welcome to the Algomon </h1>
+                <h2> A new Game Generation coming soon </h2>
+                <h3> Press below to start playing </h3>
+
+            </div>
+            <a href="signup.html">
+                <div class="btn">CLICK HERE!</div>
+            </a>
+        </header>
+
+        <main>
+                     <!-- section provided organzing pictures on the home page -->
+            <section>
+                <h3> Pictures from the game</h3>
+                <p>
+
+                <div class="center">
+                    <img src="img/primeira.jpg" width="217"></img>
+                    <img src="img/segunda.jpg" width="228"></img>
+                    <img src="img/terceira.jpg" width="170"></img>
+                </div>
+                </p>
+                <div class="center">
+                    <img src="img/quarta.jpg" width="300" height=""></img>
+                    <img src="img/quinta.jpg" width="279" height=""></img>
+
+                </div>
+            </section>
+
+            <section>
+                <h3> How to play</h3>
+                <p>
+                    In order to play this game is pretty simply all you have to do is sign up firstly and then you would
+                    receive an email with a link, although that link is only to confirm that is you, and then you would
+                    be able to join in a online or even offline session. Then feel free to try this new experience that
+                    we are bringing to the world also do not forget to make a list of your best moments and features,
+                    and then figure out a way to word your description to tease out these star moments without
+                    completely giving it away at the storefront.
+                </p>
+            </section>
+            <section>
+                <h3> Crossplay</h3>
+                <p>
+                    In video games with online gaming functionality, also called cross-compatible play, cross-platform
+                    play, crossplay or cross-play describes the ability of players using different video game hardware
+                    to play with each other simultaneously, our crossplay is available with all consoles and also pc.
+                </p>
+
+                <p>
+                <div class="center">
+                    <img src="img/console.jpg"></img>
+                </div>
+                </p>
+
+            </section>
+        </main>
+
+                 <!-- code used for JS needed for clicks counters -->
+          <div class="center">
+                 <h2>Clicks Counter</h2>
+              <button id="clickButton">Clique Aqui</button>
+          <p>Total de cliques: <span id="clickCount">0</span></p>
+
+          <script>
+            let clickCount = 0;
+            const clickButton = document.getElementById('clickButton');
+            const clickCountDisplay = document.getElementById('clickCount');
+
+            clickButton.addEventListener('click', () => {
+                clickCount++;
+                clickCountDisplay.textContent = clickCount;
+            });
+          </script>
+
+          <h2>Digital clock</h2>
+          <p id="clock"></p>
+        </div>
+
+        <!-- script used for updating clock every single second -->
+         <script>
+            function updateClock() {
+                const now = new Date();
+                const hours = String(now.getHours()).padStart(2, '0');
+                const minutes = String(now.getMinutes()).padStart(2, '0');
+                const seconds = String(now.getSeconds()).padStart(2, '0');
+                const timeString = `${hours}:${minutes}:${seconds}`;
+                document.getElementById('clock').textContent = timeString;
+            }
+
+            // Update the clock each second
+            setInterval(updateClock, 1000);
+
+            // Update the clock for the first time
+            updateClock();
+         </script>
+
+         <!-- Footer used for showing symbols and access through social media  -->
+        <footer>
+            <a href="https://github.com/Kauakb" target="_blank" rel="noopener noreferrer">
+                <img src="./img/github.svg"></img>
+                <p>Github</p>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                <img src="./img/instagram.svg"></img>
+                <p>Instagram</p>
+            </a>
+            <a href="https://www.youtube.com/watch?v=fWzPxmP656U" target="_blank" rel="noopener noreferrer">
+                <img src="./img/youtube.svg"></img>
+                <p>Youtube</p>
+            </a>
+        </footer>
+
+    </div>
+    <footer> © 2024 Algomon Interactive Entertainment Europe Ltd. All rights reserved.</footer>
+</body>
+
+</html>
